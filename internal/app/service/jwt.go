@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/hadihammurabi/belajar-go-rest-api/config"
-	"github.com/hadihammurabi/belajar-go-rest-api/internal/app/entity"
+	"github.com/hadihammurabi/belajar-go-ws/config"
+	"github.com/hadihammurabi/belajar-go-ws/internal/app/entity"
 	"github.com/sarulabs/di"
 
 	jwt "github.com/dgrijalva/jwt-go"

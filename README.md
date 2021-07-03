@@ -54,7 +54,7 @@ Agar projek dapat dijalankan, diperlukan beberapa hal untuk dipersiapkan, antara
 ## Mode Development
 1. Clone projek ke komputer lokal, dengan perintah:
   ```bash
-  git clone https://github.com/hadihammurabi/belajar-go-rest-api
+  git clone https://github.com/hadihammurabi/belajar-go-ws
   ```
 2. Menjalankan projek dengan mode development (pengembangan) dengan perintah:
   ```bash
@@ -64,7 +64,7 @@ Agar projek dapat dijalankan, diperlukan beberapa hal untuk dipersiapkan, antara
 ## Mode Production
 1. Clone projek ke komputer lokal, dengan perintah:
   ```bash
-  git clone https://github.com/hadihammurabi/belajar-go-rest-api
+  git clone https://github.com/hadihammurabi/belajar-go-ws
   ```
 2. Menjalankan projek siap guna dengan perintah:
   ```bash

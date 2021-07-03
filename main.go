@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/hadihammurabi/belajar-go-rest-api/config"
-	deliveryHttp "github.com/hadihammurabi/belajar-go-rest-api/internal/app/delivery/http"
+	"github.com/hadihammurabi/belajar-go-ws/config"
+	deliveryHttp "github.com/hadihammurabi/belajar-go-ws/internal/app/delivery/http"
+	"github.com/hadihammurabi/belajar-go-ws/internal/app/delivery/ws"
 
-	_ "github.com/hadihammurabi/belajar-go-rest-api/docs"
+	_ "github.com/hadihammurabi/belajar-go-ws/docs"
 
 	"github.com/joho/godotenv"
 )
@@ -26,10 +27,10 @@ func main() {
 
 	ioc := NewIOC(conf)
 	httpApp := deliveryHttp.Init(ioc)
+	wsApp := ioc.Get("delivery/ws").(*ws.Delivery)
 
 	forever := make(chan bool)
-	go func() {
-		httpApp.HTTP.Listen(conf.APP.Port)
-	}()
+	go httpApp.HTTP.Listen(conf.APP.Port)
+	go wsApp.HTTP.Listen(conf.APP.WsPort)
 	<-forever
 }

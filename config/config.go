@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/hadihammurabi/belajar-go-rest-api/config/database"
+	"github.com/hadihammurabi/belajar-go-ws/config/database"
 	"gorm.io/gorm"
 )
 

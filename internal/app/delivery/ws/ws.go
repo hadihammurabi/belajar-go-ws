@@ -1,4 +1,4 @@
-package http
+package ws
 
 import (
 	"github.com/hadihammurabi/belajar-go-ws/config"
@@ -44,6 +44,6 @@ func Init(ioc di.Container) *Delivery {
 		Config:      conf,
 		Validator:   config.NewValidator(),
 	}
-	delivery.ConfigureRoute()
+	delivery.InitChat()
 	return delivery
 }

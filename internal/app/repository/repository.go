@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/hadihammurabi/belajar-go-rest-api/config"
-	"github.com/hadihammurabi/belajar-go-rest-api/internal/app/entity"
+	"github.com/hadihammurabi/belajar-go-ws/config"
+	"github.com/hadihammurabi/belajar-go-ws/internal/app/entity"
 	"gorm.io/gorm"
 
 	"github.com/sarulabs/di"

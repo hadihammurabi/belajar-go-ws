@@ -1,7 +1,7 @@
 package http
 
 import (
-	"github.com/hadihammurabi/belajar-go-rest-api/internal/app/entity"
+	"github.com/hadihammurabi/belajar-go-ws/internal/app/entity"
 
 	uuid "github.com/satori/go.uuid"
 
