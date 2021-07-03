@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/hadihammurabi/belajar-go-ws/config"
 	deliveryHttp "github.com/hadihammurabi/belajar-go-ws/internal/app/delivery/http"
 	"github.com/hadihammurabi/belajar-go-ws/internal/app/delivery/ws"
@@ -30,7 +32,7 @@ func main() {
 	wsApp := ioc.Get("delivery/ws").(*ws.Delivery)
 
 	forever := make(chan bool)
-	go httpApp.HTTP.Listen(conf.APP.Port)
-	go wsApp.HTTP.Listen(conf.APP.WsPort)
+	go httpApp.Run()
+	go wsApp.HTTP.Listen(fmt.Sprintf(":%s", conf.APP.WsPort))
 	<-forever
 }

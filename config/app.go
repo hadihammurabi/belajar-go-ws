@@ -1,7 +1,6 @@
 package config
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -23,7 +22,7 @@ func ConfigureApp() *AppConfig {
 	}
 
 	return &AppConfig{
-		Port:   fmt.Sprintf(":%s", port),
-		WsPort: fmt.Sprintf(":%s", wsPort),
+		Port:   port,
+		WsPort: wsPort,
 	}
 }
